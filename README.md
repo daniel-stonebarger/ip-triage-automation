@@ -19,6 +19,8 @@ Reduce manual investigation time and standardize enrichment workflows.
 - Queries AbuseIPDB API
 - Displays abuse score, country, and ISP
 - Includes input validation and error handling
+- Saves results to a timestamped text report
+- Adds a basic assessment summary for quick review
 
 ## Usage
 Run the script in PowerShell:
@@ -27,3 +29,5 @@ Enter an IP address when prompted.
 
 ## Recent Updates
 - Improved variable naming for readability and maintainability (`$ip` → `$ipAddress`)
+- Added timestamped report output for investigation use
+- Added basic assessment text based on abuse score
