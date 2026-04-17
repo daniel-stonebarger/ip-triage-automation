@@ -24,3 +24,6 @@ Reduce manual investigation time and standardize enrichment workflows.
 Run the script in PowerShell:
 .\ip_triage-automation.ps1
 Enter an IP address when prompted.
+
+## Recent Updates
+- Improved variable naming for readability and maintainability (`$ip` → `$ipAddress`)
