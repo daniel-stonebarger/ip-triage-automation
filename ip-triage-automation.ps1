@@ -1,10 +1,10 @@
 # Prompt for IP address
-$ip = Read-Host "Enter IP address"
+$ipAddress = Read-Host "Enter IP address"
 
 # Validate IPv4/IPv6 format
 $parsedIp = $null
-if (-not [System.Net.IPAddress]::TryParse($ip, [ref]$parsedIp)) {
-    Write-Error "Invalid IP address format: $ip"
+if (-not [System.Net.IPAddress]::TryParse($ipAddress, [ref]$parsedIp)) {
+    Write-Error "Invalid IP address format: $ipAddress"
     exit 1
 }
 
@@ -17,7 +17,7 @@ if ([string]::IsNullOrWhiteSpace($apiKey)) {
 }
 
 # Build API URL safely
-$encodedIp = [System.Uri]::EscapeDataString($ip)
+$encodedIp = [System.Uri]::EscapeDataString($ipAddress)
 $url = "https://api.abuseipdb.com/api/v2/check?ipAddress=$encodedIp&maxAgeInDays=90"
 
 # Headers
